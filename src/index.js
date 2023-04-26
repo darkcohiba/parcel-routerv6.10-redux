@@ -17,6 +17,7 @@ import RootLayout from "./layout/RootLayout";
 import FormLayout from "./layout/FormLayout";
 import BaseLayout from "./layout/BaseLayout";
 import EditUser from "./pages/EditUser";
+import { userUpdatePassword } from "./utils/fetches";
 
 
 
@@ -32,17 +33,20 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route
                 path="about"
                 element={<About />}
+                action={userUpdatePassword}
             />
         </Route>
 
-        <Route path="forms" element={<FormLayout/>}>
+        <Route path="forms" element={<FormLayout/>} action={userSubmitAction}>
             <Route
                 index
                 element={<CreateUser />}
+                
             />
             <Route
-                path=":userName"
+                path=":username"
                 element={<EditUser />}
+                action={userUpdatePassword}
             />
         </Route>
     </Route>

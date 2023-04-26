@@ -10,7 +10,7 @@ export const userSubmitAction = async ({request}) =>{
     const newData = {
         username: data.get('username'),
         password: data.get('password'),
-        id: uuidv4()
+        id: data.get('id')
 
     }
     
@@ -36,3 +36,33 @@ export const userSubmitAction = async ({request}) =>{
 }
 
 // patch users
+export const userUpdatePassword = async ({params, request}) =>{
+    console.log(params.username)
+    
+    const data = await request.formData()
+
+    const newData = {
+        password: data.get('password'),
+    }
+    console.log(newData)
+    
+    // fetch('http://localhost:3000/users', {
+    //     method: 'POST',
+    //     body: JSON.stringify(newData),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log('Success:', data);
+    //     })
+    //     .catch((error) => {
+    //         console.error('Error:', error);
+    //     });
+
+    // console.log(`error: ${newData}`)
+
+    
+    return redirect('/forms')
+}

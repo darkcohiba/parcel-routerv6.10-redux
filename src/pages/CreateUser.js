@@ -1,11 +1,13 @@
-import React from 'react'
-import { Form, Link, redirect } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Form, Link, redirect, useRouteLoaderData } from 'react-router-dom'
 
 
 export default function CreateUser() {
+    const userInfo = useRouteLoaderData("root")
+    const [view, setView] = useState(false)
     return (
         <>
-            <Form method='post' action='/userform'>
+            <Form method='post' action='/forms'>
                 <label>Username
                 <br/>
                 <input type="text" name="username" />
@@ -15,8 +17,22 @@ export default function CreateUser() {
                 <br/>
                 <input type="text" name="password" />
                 </label>
+                <label>id
+                <br/>
+                <input type="number" name="id" />
+                </label>
                 <button>Submit</button>
             </Form>
+            <button onClick={() => setView( !view )}>View Edit Form</button>
+            {view && 
+            <div>
+                <ul>
+                    {userInfo.map((user, idx)=> {
+                        return(
+                        <Link key={idx} to={user.username}><li >{user.username}</li></Link>
+                    )})}
+                </ul>
+            </div>}
         </>
     )
 }
