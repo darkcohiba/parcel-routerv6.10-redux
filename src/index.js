@@ -11,7 +11,8 @@ import About from "./pages/About";
 import Loading from "./pages/Loading";
 import App from "./app";
 import CreateUser from "./pages/CreateUser";
-import { userSubmitAction } from "./pages/CreateUser";
+import { getUsers, userSubmitAction } from "./utils/fetches";
+import './index.css'
 
 
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route
             path="/"
             element={<Home />}
+            loader={getUsers}
         />
         <Route
             path="/about"

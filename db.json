@@ -1,44 +1,64 @@
 {
-    "users": [
-      {
-        "username": "johndoe",
-        "password": "password"
-      },
-      {
-        "username": "janedoe",
-        "password": "password"
-      },
-      {
-        "username": "bobsmith",
-        "password": "password"
-      },
-      {
-        "username": "sarahjones",
-        "password": "password"
-      },
-      {
-        "username": "mikewilliams",
-        "password": "password"
-      },
-      {
-        "username": "emilybrown",
-        "password": "password"
-      },
-      {
-        "username": "davidsmith",
-        "password": "password"
-      },
-      {
-        "username": "annawilson",
-        "password": "password"
-      },
-      {
-        "username": "georgelee",
-        "password": "password"
-      },
-      {
-        "username": "karenjohnson",
-        "password": "password"
-      }
-    ]
-  }
+  "users": [
+    {
+      "username": "johndoe",
+      "password": "password"
+    },
+    {
+      "username": "janedoe",
+      "password": "password"
+    },
+    {
+      "username": "bobsmith",
+      "password": "password"
+    },
+    {
+      "username": "sarahjones",
+      "password": "password"
+    },
+    {
+      "username": "mikewilliams",
+      "password": "password"
+    },
+    {
+      "username": "emilybrown",
+      "password": "password"
+    },
+    {
+      "username": "davidsmith",
+      "password": "password"
+    },
+    {
+      "username": "annawilson",
+      "password": "password"
+    },
+    {
+      "username": "georgelee",
+      "password": "password"
+    },
+    {
+      "username": "karenjohnson",
+      "password": "password"
+    },
+    {
+      "username": "sam",
+      "password": "123",
+      "id": "1511e8e1-ae7b-45ee-bc6c-0f535a6f2fa4"
+    },
+    {
+      "username": "leo",
+      "password": "123",
+      "id": "0f476a70-8570-4598-9924-69b13c432ff2"
+    },
+    {
+      "username": "ninfa",
+      "password": "123",
+      "id": "a0c06ca6-f47c-4f96-9ca2-65bdc1e19d47"
+    },
+    {
+      "username": "leo",
+      "password": "12345",
+      "id": "6a3ab449-d5e3-4521-a5f9-102d5e242818"
+    }
+  ]
+}
