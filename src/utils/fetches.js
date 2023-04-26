@@ -1,15 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { redirect } from 'react-router-dom';
 
-export async function getUsers() {
-    const response = await fetch('http://localhost:3000/users')
-    if (!response.ok) {
-        throw new Error('Failed to fetch!')
-    }
-    return response.json()
-}
-
-
+// post users
 export const userSubmitAction = async ({request}) =>{
     console.log(request)
     
@@ -42,3 +34,5 @@ export const userSubmitAction = async ({request}) =>{
     
     return redirect('/')
 }
+
+// patch users

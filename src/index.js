@@ -9,30 +9,44 @@ import {
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Loading from "./pages/Loading";
-import App from "./app";
 import CreateUser from "./pages/CreateUser";
-import { getUsers, userSubmitAction } from "./utils/fetches";
+import { userSubmitAction } from "./utils/fetches";
+import { getUsers } from "./utils/loaders";
 import './index.css'
+import RootLayout from "./layout/RootLayout";
+import FormLayout from "./layout/FormLayout";
+import EditUser from "./pages/EditUser";
+
 
 
 
 const router = createBrowserRouter(createRoutesFromElements(
-    <Route element={<App />} errorElement={<Loading />}>
+    <Route path="/" element={<RootLayout/>} errorElement={<Loading /> } id="root" loader={getUsers}>
         <Route
-            path="/"
+            index
             element={<Home />}
-            loader={getUsers}
+            
         />
         <Route
-            path="/about"
+            path="about"
             element={<About />}
         />
-        <Route
-            path="/userform"
-            element={<CreateUser />}
-            action={userSubmitAction}
-        />
+
+        <Route path="forms" element={<FormLayout/>}>
+            <Route
+                index
+                element={<CreateUser />}
+            />
+            <Route
+                path=":id"
+                element={<EditUser />}
+            />
+        </Route>
     </Route>
+
+
+
+
 ))
 
 // or (not working)

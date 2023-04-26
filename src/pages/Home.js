@@ -52,10 +52,6 @@ export default function Home() {
             </tbody>
           </table>
         </div>
-        <br/>
-        <Link to="/about">About</Link>
-        <br/>
-        <Link to="/userform">Form</Link>
     </>
 
   )

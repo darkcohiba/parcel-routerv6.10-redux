@@ -17,10 +17,6 @@ export default function CreateUser() {
                 </label>
                 <button>Submit</button>
             </Form>
-            <br/>
-            <Link to="/">Home</Link>
-            <br/>
-            <Link to="/about">About</Link>
         </>
     )
 }

@@ -6,10 +6,6 @@ export default function About() {
   return (
     <>
         <div>About</div>
-        <br/>
-        <Link to="/">Home</Link>
-        <br/>
-        <Link to="/userform">Form</Link>
     </>
   )
 }
