@@ -5,7 +5,7 @@ export default function EditUser() {
     const userInfo = useRouteLoaderData("root")
     const { username } = useParams()
     console.log(username)
-    const currentUser = userInfo.find(user => user.username === username)
+    const currentUser = userInfo?.find(user => user.username === username)
     console.log(currentUser)
   return (
     <>

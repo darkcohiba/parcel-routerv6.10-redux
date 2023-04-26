@@ -38,11 +38,13 @@ export const userSubmitAction = async ({request}) =>{
 export const userUpdatePassword = async ({ request }) =>{
     
     const data = await request.formData()
+    // const { username } = params()
     const id = data.get('id')
 
     const newData = {
         password: data.get('password'),
     }
+    // console.log(username)
     console.log(newData)
     console.log(id)
     

@@ -28,12 +28,11 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route
                 index
                 element={<Home />}
-                
             />
             <Route
                 path="about"
                 element={<About />}
-                action={userUpdatePassword}
+                // action={userUpdatePassword}
             />
         </Route>
 
@@ -41,7 +40,6 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route
                 index
                 element={<CreateUser />}
-                
             />
             <Route
                 path=":username"

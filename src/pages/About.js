@@ -5,7 +5,7 @@ export default function About() {
     console.log("About Page")
   return (
     <>
-        <div>About</div>
+        <div className='titles'>About Page</div>
     </>
   )
 }

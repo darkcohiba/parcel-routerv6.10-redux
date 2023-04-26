@@ -38,7 +38,7 @@
     {
       "id": 8,
       "username": "user4c2d0",
-      "password": "password8"
+      "password": "newpass"
     },
     {
       "id": 9,
@@ -48,7 +48,7 @@
     {
       "id": 10,
       "username": "user7b5d2",
-      "password": "password10"
+      "password": "helps"
     },
     {
       "id": 11,
@@ -78,7 +78,7 @@
     {
       "id": 16,
       "username": "user3c6b1",
-      "password": "password16"
+      "password": "sdafadsf"
     },
     {
       "id": 17,
@@ -104,6 +104,16 @@
       "username": "Sam",
       "password": "help",
       "id": "21"
+    },
+    {
+      "username": "Sam",
+      "password": "asdf",
+      "id": "22"
+    },
+    {
+      "username": "sam",
+      "password": "123123",
+      "id": "23"
     }
   ]
 }
