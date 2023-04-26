@@ -28,11 +28,6 @@ export default function Home() {
     return(
       <>
       <div>Home</div>
-
-      <br/>
-      <Link to="/about">About</Link>
-      <br/>
-      <Link to="/userform">Form</Link>
       </>
     )
   }

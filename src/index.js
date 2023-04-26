@@ -15,6 +15,7 @@ import { getUsers } from "./utils/loaders";
 import './index.css'
 import RootLayout from "./layout/RootLayout";
 import FormLayout from "./layout/FormLayout";
+import BaseLayout from "./layout/BaseLayout";
 import EditUser from "./pages/EditUser";
 
 
@@ -22,15 +23,17 @@ import EditUser from "./pages/EditUser";
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<RootLayout/>} errorElement={<Loading /> } id="root" loader={getUsers}>
-        <Route
-            index
-            element={<Home />}
-            
-        />
-        <Route
-            path="about"
-            element={<About />}
-        />
+        <Route path="/" element={<BaseLayout/>}>
+            <Route
+                index
+                element={<Home />}
+                
+            />
+            <Route
+                path="about"
+                element={<About />}
+            />
+        </Route>
 
         <Route path="forms" element={<FormLayout/>}>
             <Route
@@ -38,7 +41,7 @@ const router = createBrowserRouter(createRoutesFromElements(
                 element={<CreateUser />}
             />
             <Route
-                path=":id"
+                path=":userName"
                 element={<EditUser />}
             />
         </Route>
