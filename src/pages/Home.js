@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link, useRouteLoaderData } from 'react-router-dom'
 import { getUsers } from '../utils/fetches'
 import { useState } from 'react'
 import TableRows from '../components/TableRows'
@@ -9,7 +9,7 @@ import TableRows from '../components/TableRows'
 export default function Home() {
   // const [userInfo, setUserInfo] = useState([])
   const [errorCurrent, setErrorCurrent] = useState("")
-  const userInfo = useLoaderData()
+  const userInfo = useRouteLoaderData("root")
 
 
   // useEffect(()=>{
