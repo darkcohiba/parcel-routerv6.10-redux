@@ -36,30 +36,31 @@ export const userSubmitAction = async ({request}) =>{
 }
 
 // patch users
-export const userUpdatePassword = async ({params, request}) =>{
-    console.log(params.username)
+export const userUpdatePassword = async ({ request }) =>{
     
     const data = await request.formData()
+    const id = data.get('id')
 
     const newData = {
         password: data.get('password'),
     }
     console.log(newData)
+    console.log(id)
     
-    // fetch('http://localhost:3000/users', {
-    //     method: 'POST',
-    //     body: JSON.stringify(newData),
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log('Success:', data);
-    //     })
-    //     .catch((error) => {
-    //         console.error('Error:', error);
-    //     });
+    fetch(`http://localhost:3000/users/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(newData),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
 
     // console.log(`error: ${newData}`)
 

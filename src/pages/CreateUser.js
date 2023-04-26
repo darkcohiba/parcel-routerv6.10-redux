@@ -23,13 +23,13 @@ export default function CreateUser() {
                 </label>
                 <button>Submit</button>
             </Form>
-            <button onClick={() => setView( !view )}>View Edit Form</button>
+            <button onClick={() => setView( !view )}>View Playas</button>
             {view && 
             <div>
                 <ul>
                     {userInfo.map((user, idx)=> {
                         return(
-                        <Link key={idx} to={user.username}><li >{user.username}</li></Link>
+                        <Link key={idx} to={user.username}><li >{user.username} - {user.id}</li></Link>
                     )})}
                 </ul>
             </div>}
