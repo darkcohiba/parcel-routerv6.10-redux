@@ -1,4 +1,7 @@
 import { redirect } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addUser } from './userSlice';
+
 
 // post users
 export const userSubmitAction = async ({request}) =>{
@@ -13,20 +16,20 @@ export const userSubmitAction = async ({request}) =>{
 
     }
     
-    fetch('http://localhost:3000/users', {
-        method: 'POST',
-        body: JSON.stringify(newData),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
+    // fetch('http://localhost:3000/users', {
+    //     method: 'POST',
+    //     body: JSON.stringify(newData),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log('Success:', data);
+    //     })
+    //     .catch((error) => {
+    //         console.error('Error:', error);
+    //     });
 
     // console.log(`error: ${newData}`)
 
