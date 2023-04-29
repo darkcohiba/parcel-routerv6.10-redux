@@ -5,6 +5,8 @@ import { addUser } from './userSlice';
 
 // post users
 export const userSubmitAction = async ({request}) =>{
+    const dispatch = useDispatch();
+
     console.log(request)
     
     const data = await request.formData()
@@ -15,6 +17,10 @@ export const userSubmitAction = async ({request}) =>{
         id: data.get('id')
 
     }
+
+    dispatch(addUser(newData));
+
+
     
     // fetch('http://localhost:3000/users', {
     //     method: 'POST',

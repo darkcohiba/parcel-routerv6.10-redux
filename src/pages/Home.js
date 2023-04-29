@@ -4,12 +4,17 @@ import { Link, useRouteLoaderData } from 'react-router-dom'
 import { getUsers } from '../utils/fetches'
 import { useState } from 'react'
 import TableRows from '../components/TableRows'
+import { useSelector } from 'react-redux';
+
 
 
 export default function Home() {
   // const [userInfo, setUserInfo] = useState([])
   const [errorCurrent, setErrorCurrent] = useState("")
   const userInfo = useRouteLoaderData("root")
+  const users = useSelector((state) => state.users);
+  console.log(users)
+
 
 
   // useEffect(()=>{
