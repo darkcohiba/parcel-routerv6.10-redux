@@ -18,6 +18,8 @@ import FormLayout from "./layout/FormLayout";
 import BaseLayout from "./layout/BaseLayout";
 import EditUser from "./pages/EditUser";
 import { userUpdatePassword } from "./utils/fetches";
+import { Provider } from 'react-redux';
+import store from './utils/store';
 
 
 
@@ -81,7 +83,10 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
-    <RouterProvider 
-        router={router} 
-    />
+    <Provider store={store}>
+        <RouterProvider 
+            router={router} 
+        />
+    </Provider>
+
 );
