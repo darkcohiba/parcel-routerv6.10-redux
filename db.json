@@ -101,18 +101,18 @@
       "password": "password20"
     },
     {
-      "username": "Sam",
-      "password": "help",
+      "username": "sam",
+      "password": "1234",
       "id": "21"
     },
     {
-      "username": "Sam",
-      "password": "asdf",
+      "username": "steve",
+      "password": "123",
       "id": "22"
     },
     {
-      "username": "sam",
-      "password": "123123",
+      "username": "adf",
+      "password": "asdfa",
       "id": "23"
     }
   ]
