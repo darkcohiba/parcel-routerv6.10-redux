@@ -4,7 +4,8 @@ import { Link, useRouteLoaderData } from 'react-router-dom'
 import { getUsers } from '../utils/fetches'
 import { useState } from 'react'
 import TableRows from '../components/TableRows'
-import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
 
 
 
@@ -12,8 +13,16 @@ export default function Home() {
   // const [userInfo, setUserInfo] = useState([])
   const [errorCurrent, setErrorCurrent] = useState("")
   const userInfo = useRouteLoaderData("root")
-  const users = useSelector((state) => state.users);
-  console.log(users)
+  const dispatch = useDispatch();
+
+  const createUsers = userInfo => {
+    userInfo.forEach(user => {
+      // console.log(user)
+      dispatch(addUser(user))
+
+    });
+  }
+  // createUsers(userInfo)
 
 
 

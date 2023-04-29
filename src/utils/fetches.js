@@ -5,7 +5,7 @@ import { addUser } from './userSlice';
 
 // post users
 export const userSubmitAction = async ({request}) =>{
-    const dispatch = useDispatch();
+
 
     console.log(request)
     
@@ -18,7 +18,6 @@ export const userSubmitAction = async ({request}) =>{
 
     }
 
-    dispatch(addUser(newData));
 
 
     
