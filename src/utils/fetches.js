@@ -5,6 +5,7 @@ import { addUser } from './userSlice';
 
 // post users
 export const userSubmitAction = async ({request}) =>{
+    // const dispatch = useDispatch()
 
 
     console.log(request)
@@ -17,24 +18,26 @@ export const userSubmitAction = async ({request}) =>{
         id: data.get('id')
 
     }
+    // dispatch(addUser(newData))
+
 
 
 
     
-    // fetch('http://localhost:3000/users', {
-    //     method: 'POST',
-    //     body: JSON.stringify(newData),
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log('Success:', data);
-    //     })
-    //     .catch((error) => {
-    //         console.error('Error:', error);
-    //     });
+    fetch('http://localhost:3000/users', {
+        method: 'POST',
+        body: JSON.stringify(newData),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
 
     // console.log(`error: ${newData}`)
 

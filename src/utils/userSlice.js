@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+import { getUsersJsoned } from './loaders';
 
 
 export const userSlice = createSlice({
     name: 'users',
-    initialState: [ ],
+    initialState: [],
     reducers: {
         addUser: (state, action) => {
             const { id, username, password } = action.payload;

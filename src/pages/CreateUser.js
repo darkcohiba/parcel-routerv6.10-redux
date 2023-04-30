@@ -5,9 +5,13 @@ import { Form, Link, redirect, useRouteLoaderData } from 'react-router-dom'
 export default function CreateUser() {
     const userInfo = useRouteLoaderData("root")
     const [view, setView] = useState(false)
+
+    const addUserToRed = ()=>{
+        console.log(userInfo[userInfo.length - 1])
+    }
     return (
         <>
-            <Form method='post' action='/forms'>
+            <Form method='post' action='/forms' onSubmit={addUserToRed}>
                 <label>Username
                 <br/>
                 <input type="text" name="username" />
